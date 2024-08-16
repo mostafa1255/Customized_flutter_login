@@ -165,7 +165,7 @@ class __HeaderState extends State<_Header> {
     final theme = Theme.of(context);
     final renderParagraph = RenderParagraph(
       TextSpan(
-        text: "Test in span",
+        text: widget.title,
         style: theme.textTheme.displaySmall!.copyWith(
           fontSize: widget.loginTheme.beforeHeroFontSize,
         ),
@@ -226,7 +226,7 @@ class __HeaderState extends State<_Header> {
     Widget? title;
     if (widget.titleTag != null && !isNullOrEmpty(widget.title)) {
       title = HeroText(
-        "Test Repo",
+        widget.title,
         key: kTitleKey,
         tag: widget.titleTag,
         largeFontSize: widget.loginTheme.beforeHeroFontSize,
@@ -236,7 +236,7 @@ class __HeaderState extends State<_Header> {
       );
     } else if (!isNullOrEmpty(widget.title)) {
       title = Text(
-        "Test Repo",
+        widget.title!,
         key: kTitleKey,
         style: theme.textTheme.displaySmall,
       );
@@ -549,7 +549,7 @@ class _FlutterLoginState extends State<FlutterLogin>
       logo: widget.logo,
       logoTag: widget.logoTag,
       logoWidth: widget.theme?.logoWidth ?? 0.75,
-      title: "Test Repo",
+      title: widget.title,
       titleTag: widget.titleTag,
       loginTheme: loginTheme,
     );
