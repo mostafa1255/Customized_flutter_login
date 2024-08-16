@@ -165,7 +165,7 @@ class __HeaderState extends State<_Header> {
     final theme = Theme.of(context);
     final renderParagraph = RenderParagraph(
       TextSpan(
-        text: widget.title,
+        text: "Test in span",
         style: theme.textTheme.displaySmall!.copyWith(
           fontSize: widget.loginTheme.beforeHeroFontSize,
         ),
@@ -226,7 +226,7 @@ class __HeaderState extends State<_Header> {
     Widget? title;
     if (widget.titleTag != null && !isNullOrEmpty(widget.title)) {
       title = HeroText(
-        widget.title,
+        "Test Repo",
         key: kTitleKey,
         tag: widget.titleTag,
         largeFontSize: widget.loginTheme.beforeHeroFontSize,
@@ -236,7 +236,7 @@ class __HeaderState extends State<_Header> {
       );
     } else if (!isNullOrEmpty(widget.title)) {
       title = Text(
-        widget.title!,
+        "Test Repo",
         key: kTitleKey,
         style: theme.textTheme.displaySmall,
       );
