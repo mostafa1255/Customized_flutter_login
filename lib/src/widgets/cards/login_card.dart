@@ -599,16 +599,41 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
           padding: loginTheme.providerButtonPadding ??
               const EdgeInsets.symmetric(horizontal: 6.0, vertical: 8.0),
           child: ScaleTransition(
-            scale: _buttonScaleAnimation,
-            child: SignInButton(
-              loginProvider.button!,
-              onPressed: () => _loginProviderSubmit(
-                loginProvider: loginProvider,
+              scale: _buttonScaleAnimation,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.grey),
+                  ),
+                  onPressed: () => _loginProviderSubmit(
+                        loginProvider: loginProvider,
+                      ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton(
+                        onPressed: () {},
+                        icon: loginProvider.button!,
+                      ),
+                      Text(
+                        loginProvider.label,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ))
+              //  SignInButton(
+              //   loginProvider.button!,
+
+              //   onPressed: () => _loginProviderSubmit(
+              //     loginProvider: loginProvider,
+              //   ),
+              //   text: loginProvider.label,
+              // ),
+              // child: loginProvider.button,
               ),
-              text: loginProvider.label,
-            ),
-            // child: loginProvider.button,
-          ),
         );
       }).toList(),
     );

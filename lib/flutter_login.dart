@@ -38,7 +38,7 @@ class LoginProvider {
   ///
   /// NOTE: Both [button] and [icon] can be added to [LoginProvider],
   /// but [button] will take preference over [icon]
-  final Buttons? button;
+  final Icon? button;
 
   /// The icon shown on the provider button
   ///
