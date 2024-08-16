@@ -549,7 +549,7 @@ class _FlutterLoginState extends State<FlutterLogin>
       logo: widget.logo,
       logoTag: widget.logoTag,
       logoWidth: widget.theme?.logoWidth ?? 0.75,
-      title: widget.title,
+      title: "Test Repo",
       titleTag: widget.titleTag,
       loginTheme: loginTheme,
     );
