@@ -30,3 +30,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/ecorp.png
+
+  fonts:
+    - family: MyFlutterApp
+      fonts:
+        - asset: example/assets/fonts/MyFlutterApp.ttf
