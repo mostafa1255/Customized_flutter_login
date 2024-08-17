@@ -612,7 +612,9 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () => _loginProviderSubmit(
+                          loginProvider: loginProvider,
+                        ),
                         icon: loginProvider.button!,
                       ),
                       Text(
