@@ -160,7 +160,7 @@ class _ConfirmRecoverCardState extends State<_ConfirmRecoverCard>
       onPressed: !_isSubmitting ? widget.onBack : null,
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 4),
       materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-      textColor: theme.primaryColor,
+      textColor: Colors.black,
       child: Text(messages.goBackButton),
     );
   }
