@@ -603,7 +603,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
               child: ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.grey),
+                        MaterialStateProperty.all<Color>(Colors.black),
                   ),
                   onPressed: () => _loginProviderSubmit(
                         loginProvider: loginProvider,
