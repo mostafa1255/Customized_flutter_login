@@ -597,7 +597,7 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
       children: buttonProvidersList.map((loginProvider) {
         return Padding(
           padding: loginTheme.providerButtonPadding ??
-              const EdgeInsets.symmetric(horizontal: 6.0, vertical: 8.0),
+              const EdgeInsets.symmetric(vertical: 8.0),
           child: ScaleTransition(
               scale: _buttonScaleAnimation,
               child: ElevatedButton(
@@ -609,12 +609,15 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
                         loginProvider: loginProvider,
                       ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       loginProvider.button!,
+                 const     SizedBox(
+                        width: 5,
+                      ),
                       Text(
                         loginProvider.label,
-                        style: TextStyle(
+                        style:const TextStyle(
                             color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w500),
