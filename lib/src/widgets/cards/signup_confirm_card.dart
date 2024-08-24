@@ -70,7 +70,7 @@ class _ConfirmSignupCardState extends State<_ConfirmSignupCard>
 
     if (error != null) {
       if (context.mounted) {
-        showErrorToast(context, messages.flushbarTitleError, error);
+        showErrorToast(context, "OTP is not Valid Test2", error);
       }
       setState(() => _isSubmitting = false);
       await _fieldSubmitController.reverse();
