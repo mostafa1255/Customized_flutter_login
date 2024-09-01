@@ -471,7 +471,7 @@ class FlutterLogin extends StatefulWidget {
 
   static String? defaultPasswordValidator(String? value) {
     if (value == null || value.isEmpty || value.length <= 2) {
-      return 'Password is too short!';
+      return 'Please enter your password';
     }
     return null;
   }
